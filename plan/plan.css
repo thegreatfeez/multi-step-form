@@ -1,0 +1,204 @@
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+body{
+    margin: 50px 25%;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 1440px;
+    background-color: #EDF4FE;
+}
+main{
+    display: flex;
+    color: hsl(213, 96%, 18%);
+    background-color:white;
+    border-radius: 10px;
+    width: 800px;
+}
+/* Sidebar start */
+.sidebar{
+    margin: 10px;
+}
+.active{
+    color: black;
+    background-color: #C0E3FF;
+    font-weight: 700;
+}
+.sidebar-steps{
+    position: relative;
+}
+.steps{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #fff;
+}
+.steps-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.steps-row div{
+    margin-left: 15px;
+    width: 150px;
+}
+.steps-row div h6,
+.price h5{
+    margin-bottom: 2px;
+    font-weight: 400;
+    color: hsl(229, 24%, 87%);
+}
+.steps-row div h5{
+    margin-top: 2px;
+    font-weight: 700;
+}
+.steps-row p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Select Plan */
+.select-plan{
+    margin-right: 45%;
+    margin-top: 35px;
+    margin-left: 50px;
+    width: 100%;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.select-plan button{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.select-plan button:hover{
+    color:  hsl(213, 96%, 18%);
+    background-color:  hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+.choose-plan{
+    display: flex;
+    margin-top: 40px;
+}
+.plan-type h1{
+    margin-bottom: 0
+}
+.plan-type h5{
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(229, 24%, 87%);
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.plans{
+    border: 1px solid  hsl(229, 24%, 87%);
+    width: 100px;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+.plans:hover{
+border: 1px solid hsl(243, 100%, 62%);
+}
+.plans:active{
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color: #F8F9FE;
+}
+.price h4{
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.price h5{
+    margin-top: 2px;
+}
+.price strong{
+    color: hsl(213, 96%, 18%);
+}
+.hidden{
+    display: none;
+}
+.duration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #F8F9FE;
+    margin-top: 30px;
+}
+.duration h5,
+.duration label{
+    margin-right: 20px;
+}
+.button{
+    margin-top: 100px;
+}
+
+/* Toggle switch */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+input:checked + .slider{
+    background-color: hsl(213, 96%, 18%);
+}
+input:focus +slider{
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+input:checked + .slider::before{
+    -webkit-transform: translate(20px);
+    -ms-transform: translate(20px);
+    transform: translate(20px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
